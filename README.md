@@ -1,3 +1,4 @@
+# Updated version from Py-Day59
 # Flask Blog 2.0 - Bootstrap Edition
 
 A modern, fully-featured blog platform built with Flask and Bootstrap 5. Create, manage, and publish blog posts with a beautiful, responsive interface.
@@ -213,7 +214,7 @@ Flask Blog 2.0/
 
 ## 🤝 Contributing
 
-This is a learning project from Day 59 of Python development. Feel free to:
+This is a learning project from Day 60 of Python development. Feel free to:
 - Fork the repository
 - Add new features
 - Improve the design
@@ -226,4 +227,4 @@ This project is open source and available under the MIT License.
 
 ---
 
-**Built with ❤️ using Flask and Bootstrap** | **Day 59 of Python Learning Journey**
+**Built with ❤️ using Flask and Bootstrap** | **Day 60 of Python Learning Journey**
