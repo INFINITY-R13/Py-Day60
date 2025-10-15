@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block title %}About - My Flask Blog{% endblock %}
+
+{% block content %}
+    <!-- About Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h1 class="hero-title">About Me</h1>
+                    <p class="hero-subtitle">Passionate developer sharing knowledge through code and words</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="text-center mb-5">
+                        <img src="https://via.placeholder.com/200x200/3498db/ffffff?text=Profile" 
+                             alt="Profile" class="rounded-circle mb-4" width="200" height="200">
+                        <h3>John Developer</h3>
+                        <p class="text-muted">Full Stack Developer & Tech Enthusiast</p>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>My Story</h4>
+                            <p>Welcome to my blog! I'm a passionate developer who loves to share knowledge and experiences through writing. This blog is where I document my journey in web development, share tutorials, and discuss the latest trends in technology.</p>
+                            
+                            <p>I specialize in Python, Flask, JavaScript, and modern web technologies. When I'm not coding, you can find me exploring new frameworks, contributing to open source projects, or writing about my latest discoveries.</p>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <h4>Skills & Technologies</h4>
+                            <div class="mb-3">
+                                <span class="badge bg-primary me-2 mb-2">Python</span>
+                                <span class="badge bg-primary me-2 mb-2">Flask</span>
+                                <span class="badge bg-primary me-2 mb-2">JavaScript</span>
+                                <span class="badge bg-primary me-2 mb-2">Bootstrap</span>
+                                <span class="badge bg-primary me-2 mb-2">HTML/CSS</span>
+                                <span class="badge bg-primary me-2 mb-2">Git</span>
+                                <span class="badge bg-primary me-2 mb-2">SQL</span>
+                                <span class="badge bg-primary me-2 mb-2">REST APIs</span>
+                            </div>
+                            
+                            <h4>Connect With Me</h4>
+                            <div class="social-links">
+                                <a href="#" class="btn btn-outline-primary me-2 mb-2">
+                                    <i class="fab fa-github me-1"></i>GitHub
+                                </a>
+                                <a href="#" class="btn btn-outline-primary me-2 mb-2">
+                                    <i class="fab fa-linkedin me-1"></i>LinkedIn
+                                </a>
+                                <a href="#" class="btn btn-outline-primary me-2 mb-2">
+                                    <i class="fab fa-twitter me-1"></i>Twitter
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 mb-4">
+                    <div class="card border-0 bg-transparent">
+                        <div class="card-body">
+                            <i class="fas fa-code fa-3x text-primary mb-3"></i>
+                            <h4>50+</h4>
+                            <p class="text-muted">Projects Completed</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card border-0 bg-transparent">
+                        <div class="card-body">
+                            <i class="fas fa-blog fa-3x text-primary mb-3"></i>
+                            <h4>25+</h4>
+                            <p class="text-muted">Blog Posts</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card border-0 bg-transparent">
+                        <div class="card-body">
+                            <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                            <h4>1000+</h4>
+                            <p class="text-muted">Readers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card border-0 bg-transparent">
+                        <div class="card-body">
+                            <i class="fas fa-coffee fa-3x text-primary mb-3"></i>
+                            <h4>∞</h4>
+                            <p class="text-muted">Cups of Coffee</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

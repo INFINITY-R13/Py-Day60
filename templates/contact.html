@@ -1,0 +1,185 @@
+{% extends "base.html" %}
+
+{% block title %}Contact - My Flask Blog{% endblock %}
+
+{% block content %}
+<!-- Contact Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                {% if success %}
+                <h1 class="hero-title">Successfully sent your message</h1>
+                <p class="hero-subtitle">Thank you for reaching out! I'll get back to you soon.</p>
+                {% else %}
+                <h1 class="hero-title">Get In Touch</h1>
+                <p class="hero-subtitle">Have a question or want to collaborate? I'd love to hear from you!</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Content -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h4 class="card-title mb-4">Send me a message</h4>
+                                <form method="POST" action="{{ url_for('contact') }}">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="firstName" class="form-label">First Name</label>
+                                            <input type="text" class="form-control" id="firstName" name="firstName"
+                                                required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="lastName" class="form-label">Last Name</label>
+                                            <input type="text" class="form-control" id="lastName" name="lastName"
+                                                required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="subject" class="form-label">Subject</label>
+                                        <select class="form-select" id="subject" name="subject">
+                                            <option value="">Choose a topic...</option>
+                                            <option value="general">General Inquiry</option>
+                                            <option value="collaboration">Collaboration</option>
+                                            <option value="feedback">Blog Feedback</option>
+                                            <option value="technical">Technical Question</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message" class="form-label">Message</label>
+                                        <textarea class="form-control" id="message" name="message" rows="5"
+                                            required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-paper-plane me-2"></i>Send Message
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <h5 class="card-title">Contact Information</h5>
+
+                                <div class="mb-3">
+                                    <i class="fas fa-envelope text-primary me-2"></i>
+                                    <strong>Email:</strong><br>
+                                    <a href="mailto:hello@myflaskblog.com">hello@myflaskblog.com</a>
+                                </div>
+
+                                <div class="mb-3">
+                                    <i class="fas fa-clock text-primary me-2"></i>
+                                    <strong>Response Time:</strong><br>
+                                    Usually within 24 hours
+                                </div>
+
+                                <div class="mb-3">
+                                    <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                                    <strong>Location:</strong><br>
+                                    San Francisco, CA
+                                </div>
+
+                                <hr>
+
+                                <h6>Follow Me</h6>
+                                <div class="social-links">
+                                    <a href="#" class="btn btn-outline-primary btn-sm me-2 mb-2">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-outline-primary btn-sm me-2 mb-2">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-outline-primary btn-sm me-2 mb-2">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mt-4">
+                            <div class="card-body text-center">
+                                <i class="fas fa-lightbulb fa-3x text-warning mb-3"></i>
+                                <h6>Have a project idea?</h6>
+                                <p class="small text-muted">I'm always interested in hearing about new opportunities and
+                                    interesting projects.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h3 class="text-center mb-5">Frequently Asked Questions</h3>
+
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse1">
+                                How often do you publish new blog posts?
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                I try to publish new content weekly, covering topics from web development tutorials to
+                                industry insights and personal experiences.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse2">
+                                Do you offer consulting or freelance services?
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes! I'm available for consulting on web development projects, code reviews, and
+                                technical mentoring. Feel free to reach out to discuss your needs.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse3">
+                                Can I suggest topics for future blog posts?
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Absolutely! I love hearing from readers about what topics they'd like to see covered.
+                                Send me your suggestions through the contact form above.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
